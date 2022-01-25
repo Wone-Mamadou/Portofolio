@@ -1,0 +1,70 @@
+/* ******************************** Tous types décran *****************************/
+body{
+  background-color: #e3f2fd;
+    margin: 0px;
+  padding: 0px;
+}
+
+.bg-primary{
+  background-color: #F44336 !important;
+}
+/* ******************************** smartphone  et tablette*****************************/
+@media (max-width: 991.98px) {
+  #moi .laptop, #navbar img{
+    display: none;
+  }
+}
+/* ******************************** PC et écaran tres large *****************************/
+@media (min-width: 992px) {
+  #navbar{
+    display: flex;
+    flex-direction: column;
+    width: 17em;
+    height: 100vh;
+  }
+  #navbar .navbar-brand img{
+      border: 6px solid;
+  }
+
+  #navbar .navbar-collapse .navbar-nav{
+      display: inline-block;
+      text-align: center;
+      text-transform: uppercase;
+  }
+
+  #navbar .navbar-brand{
+      padding: 30px;
+  }
+  section{
+    margin-left: 30%;
+  }
+  
+  #moi .mobile{
+    display: none;
+  }
+  
+  #moi .laptop{
+    padding: 20%;
+    text-align: center;
+
+  }
+  
+  .heading{
+    font-size: 4em;
+    color: #E53935;
+    border-bottom: 1px solid;
+  }
+  
+  #moi .laptop h3{
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+  
+  #moi .laptop h4{
+    font-size: 25px;
+  }
+  
+  #moi .laptop p{
+    font-size: 30px;
+  }
+}
