@@ -8,11 +8,88 @@ body{
 .bg-primary{
   background-color: #F44336 !important;
 }
+
+.heading{
+    font-size: 70px;
+    color: #E53935;
+    border-bottom: 1px solid;
+    text-align: center;
+    padding-top: 3rem;
+    text-transform: uppercase;
+  }
+  .container-fluid{
+    margin: 0;
+    padding: 0;
+  }
+
+ .container-fluid .heading{
+    padding-top: 0.1rem !important;
+  } 
+
+  .container{
+    height: 100vh;
+  }
+  /***********Expérience rt formation *************************/
+.annee{
+    color: #9CCC65;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.formation, .experience{
+    font-style: italic;
+    padding: 0.5em;
+    color: #FF1744;
+}
+.experience p{
+    text-align: center;
+}
+/*********************** Compétences************************* */
+#competences .progress{
+    height: 50px;
+    margin-top: 35px;
+    background-color: #E53935;
+}
+
+#competences .progress-bar{
+    font-size: 1.9em;
+    font-weight: bold;
+    text-shadow: 2px 2px 3px black;
+}
+/* ***************************Langue et centre d'intéret****************************** */
+#langue-parlee li, #centre-interet li, #qualite li{
+    color: #FF1744;
+    list-style: none;
+    padding: 1.3em;
+}
 /* ******************************** smartphone  et tablette*****************************/
 @media (max-width: 991.98px) {
   #moi .laptop, #navbar img{
     display: none;
   }
+
+  #moi .mobile .heading{
+      visibility: hidden;
+  }
+
+  #moi .mobile a{
+      text-transform: uppercase;
+       
+  }
+
+  #moi .mobile {
+      background-color: #F44336;
+      text-align: center;
+      height: 100vh;
+      color: white;
+  }
+
+  #moi .mobile img{
+    width: 80%;
+    border: 8px solid;
+  }
+  
+  
 }
 /* ******************************** PC et écaran tres large *****************************/
 @media (min-width: 992px) {
