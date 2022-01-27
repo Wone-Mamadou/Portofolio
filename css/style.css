@@ -16,6 +16,9 @@ body{
     text-align: center;
     padding-top: 3rem;
     text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+    font-style: oblique;
   }
   .container-fluid{
     margin: 0;
@@ -28,6 +31,12 @@ body{
 
   .container{
     height: 100vh;
+  }
+
+  .wone{
+      font-weight: bold;
+      font-style: italic;
+      text-shadow: 2px 2px 3px black;
   }
   /***********Expérience rt formation *************************/
 .annee{
@@ -89,6 +98,9 @@ body{
     border: 8px solid;
   }
   
+  #navbar{
+      text-align: center;
+  }
   
 }
 /* ******************************** PC et écaran tres large *****************************/
@@ -144,4 +156,9 @@ body{
   #moi .laptop p{
     font-size: 30px;
   }
+}
+
+#icon {
+    float: right;
+    font-size: 50px;
 }

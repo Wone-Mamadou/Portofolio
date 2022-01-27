@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -13,11 +14,13 @@
     <header class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="navbar">
             
-            <a class="navbar-brand" href="#moi">WONE MAMADOU<br>
+            <a class="navbar-brand fs-1 wone" href="#moi">WONE MAMADOU<br>
             
             </a>
-            <a class="navbar-brand bouton-menu" href="#moi"> <span id="img"> <img src="images/tof-profil.jpeg" alt=" photo profil" class="rounded-circle img-fluid"> </span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#NavbarMenu" aria-controls="NavbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand bouton-menu" href="#moi"> 
+                <span id="img"> <img src="images/tof-profil.jpeg" alt=" photo profil" class="rounded-circle img-fluid"> </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#NavbarMenu" aria-controls="NavbarMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="NavbarMenu">
@@ -27,11 +30,11 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#formation">Formations</a>
+                        <a class="nav-link" href="#experience">Expériences</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#experience">Expériences</a>
+                        <a class="nav-link" href="#formation">Formations</a>
                     </li>
 
                     <li class="nav-item">
@@ -43,10 +46,10 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#centre_intéret">Centre d'intêret</a>
+                        <a class="nav-link" href="#centre-interet">Centre d'intêret</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#qualité">Qualités</a>
+                        <a class="nav-link" href="#qualite">Qualités</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -78,8 +81,8 @@
                     <h3>Développeur Web</h3>
                     <h4>Email : mamadouwone2016@gmail.com</h4>
                     <p class="adresse">22 Rue Danton,<br> 91260 Juvisy sur Orge</p>
-                    <a href="#" class="btn btn-lg btn-success">Télécharger CV</a>
-                    <a href="#" class="btn btn-lg btn-primary">Contact</a>
+                    <a href="#" class="btn btn-lg btn-success">Télécharger CV <i class="fas fa-arrow-circle-down"></i></a>
+                    <a href="#contact" class="btn btn-lg btn-primary">Contact <i class="fas fa-id-badge"></i></a>
                 </div>
             </div>
         </div>
@@ -246,8 +249,10 @@
                     <textarea name="" id="message" class="form-control" cols="70" rows="4"></textarea>
                 </div>
                 <br>
-                <button class="btn btn-lg btn-success" type="button" name="button">Envoyer</button>
+                <button class="btn btn-lg btn-success" type="button" name="button">Envoyer <i class="fas fa-paper-plane"></i></button>
             </form>
+            <a href="#moi"><i id="icon" class="fas fa-angle-double-up"></i></a>
+            
         </div>
     </section>
 
@@ -257,5 +262,27 @@
     <script type="text/javascript" src="js/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+
+    <script type="text/javascript">
+        // pour caher le menu apres chaque clique
+        $('.navbar').click(function(){
+            $('.navbar-collapse').collapse('hide')
+        })
+    // pour avoir une référence de la position dans la page
+        $('body').scrollspy({
+            target: '#NavbarMenu'
+        })
+
+    // Animation d'une page à une autre 
+
+    $('.navbar a').click(function(event){
+        event.preventDefault();
+        var id = this.hash;
+        // console.log(id);
+        $('html, body').animate({scrollTop: $(id).offset().top}, 1500, function(){
+            window.location.hash = id;
+        })
+    })
+    </script>
 </body>
 </html>
